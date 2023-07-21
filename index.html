@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/Logo.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kalative | Admin</title>
+    <link rel="stylesheet" href="./src/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  </head>
+  <body>
+
+    <main class="container" style="padding: 0;">
+
+      <!-- Navbar -->
+      <nav class="container-fluid" style="padding: 0.8rem;">
+        <ul>
+          <a href="/"><img style="width: 72px; height: 72px; object-fit: contain;" src="/Logo.svg" alt="Kalative"></a>
+        </ul>
+        <ul>
+          <li><a href="#posts">Posts</a></li>
+          <li><a href="#users">Users</a></li>
+        </ul>
+      </nav>
+      <!-- Navbar -->
+
+      <!-- API Section -->
+
+      <!-- Blogs & Newsletters -->
+
+      <section class="container-fluid" style="margin-top: 1rem;" id="posts">
+
+        <h1>API Post</h1>
+
+        <form id="postForm">
+          
+          <!-- Selecting Blog/Newsletter -->
+          <div style="display: flex; gap: 1rem;">
+            <div>
+              <input required id="r1" type="radio" value="blogs" name="postSelection">
+              <label for="r1">Blogs</label>
+            </div>
+            <div>
+              <input required id="r2" type="radio" value="news" name="postSelection">
+              <label for="r2">Newsletters</label>
+            </div>
+          </div>
+
+          <!-- Form Inputs -->
+          <div style="margin-top: 1rem;">
+
+            <div>
+              <label for="title">Title<span style="color: red;">*</span></label>
+              <input required type="text" id="title" name="title" placeholder="Title of Article">
+            </div>
+
+            <div>
+              <label for="writer">Writer</label>
+              <input type="text" id="writer" name="writer" placeholder="Name of Writer" value="Kalative">
+            </div>
+
+            <div>
+              <label for="description">Description<span style="color: red;">*</span></label>
+              <textarea required id="description" name="description" rows="10" style="resize: vertical;" placeholder="Description"></textarea>
+            </div>
+
+            <div>
+              <input required type="file" accept=".jpg,.jpeg,.png" id="image">
+              <small>(<span style="color: red;">Required</span> & Formats - jpg | jpeg | png)</small>
+            </div>
+
+            <button style="margin-top: 1rem;" type="submit" id="submitBtn">Upload</button>
+
+          </div>
+
+        </form>
+
+      </section>
+
+      <!-- API Section -->
+
+      <!-- Users Download Details -->
+
+      <section class="container-fluid" style="margin-top: 1rem;" id="users">
+
+        <h1>Users Info</h1>
+
+        <!-- Users -->
+
+        <ul id="allUsers"></ul>
+
+      </section>
+
+      <!-- Users Download Details -->
+
+    </main>
+    
+    <script type="module" defer src="/src/main.ts"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  </body>
+</html>

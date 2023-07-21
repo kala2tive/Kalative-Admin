@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --f-p : 'Open Sans' sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+} 
+
+body {
+  overflow-x: hidden;
+}
+
+#allUsers {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1.6rem;
+  padding: 0 !important;
+}
+
+.userItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  list-style-type: none;
+  padding: 1rem 0.8rem;
+  border: 2px solid #232323;
+  border-radius: 8px;
+}
+
+p {
+  line-height: normal;
+  margin: 0 !important;
+}
