@@ -1,7 +1,7 @@
 import axios from "axios";
 import Toastify from 'toastify-js';
 
-const HOST = 'http://localhost:5000';
+const HOST = 'https://calm-blue-trout-tutu.cyclic.app';
 
 const postForm = document.querySelector('#postForm') as HTMLFormElement;
 const postTypes: HTMLInputElement[] = Array.from(document.querySelectorAll('input[type="radio"]'));
